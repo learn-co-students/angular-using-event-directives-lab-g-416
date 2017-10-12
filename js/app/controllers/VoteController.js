@@ -1,14 +1,16 @@
 function VoteController() {
-    this.votes = 0;
+    var vm = this;
+    vm.votes = 0;
 
-    this.incrementVotes = function () {
-
+    vm.incrementVotes = function () {
+        vm.votes++; 
     };
 
-    this.decrementVotes = function () {
-
+    vm.decrementVotes = function () {
+        vm.votes--;
     };
 }
+//it seems there is no built-in click count property for ng-click. will write one later
 
 angular
     .module('app')
