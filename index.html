@@ -1,19 +1,21 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Angular Application</title>
 </head>
+
 <body>
 
     <div ng-app="app">
         <div ng-controller="VoteController as vm">
             You have {{ vm.votes }} votes!
 
-            <button>Add Votes</button>
-            <button>Remove a vote</button>
+            <button ng-click="incrementVotes();">Add Votes</button>
+            <button ng-click="decrementVotes();">Remove a vote</button>
         </div>
     </div>
 
@@ -22,4 +24,5 @@
     <script src="js/app/controllers/VoteController.js"></script>
 
 </body>
+
 </html>
