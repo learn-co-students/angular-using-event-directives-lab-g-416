@@ -1,12 +1,20 @@
 function VoteController() {
-    this.votes = 0;
+    this.votes = 5;
+    this.clicks = 0
 
     this.incrementVotes = function () {
-    	this.votes ++
+
+    	if (this.clicks === 0){
+    		this.votes ++
+    		this.clicks +=1
+    	} 
     };
 
     this.decrementVotes = function () {
-    	this.votes --
+    	if (this.clicks === 0){
+    		this.votes --
+    		this.clicks +=1
+    	} 
     };
 }
 
